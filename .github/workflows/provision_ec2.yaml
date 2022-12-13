@@ -8,6 +8,10 @@ on:
         required: true
         default: 'App Server'
         type: string
+permissions:
+  contents: read
+  pull-requests: write
+  
 jobs:
   provision-ec2:
     runs-on: ubuntu-latest
