@@ -11,7 +11,7 @@ data "aws_ami" "ubuntu" {
         values = ["hvm"]
     }
     
-    owners = ["099720109477"] # Canonical
+    owners = ["240706599189"] # Canonical
 }
 
 provider "aws" {
@@ -20,7 +20,7 @@ provider "aws" {
 
 resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   key_name      = "testeiac"
 
   tags = {
