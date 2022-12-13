@@ -21,6 +21,7 @@ jobs:
         with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::240706599189:role/my-github-actions-role
           aws-region: us-west-2
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
